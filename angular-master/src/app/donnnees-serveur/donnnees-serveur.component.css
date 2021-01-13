@@ -1,0 +1,28 @@
+table {
+  width: 70%;
+}
+
+.titre {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mat-card-content {
+  text-align: center;
+  font-size: x-large;
+}
+
+#info {
+  width: 30%;
+}
+
+#info .mat-card-content{
+  text-align: center;
+  font-size: medium;
+}
+
+#principal {
+  background-color: #982828;
+  color: white;
+}

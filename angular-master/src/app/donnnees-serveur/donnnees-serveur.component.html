@@ -1,0 +1,58 @@
+<div fxFlexFill fxLayoutAlign="center center" *ngIf="loading">
+  <mat-card>
+    <mat-card-content>
+      <mat-progress-spinner
+        class="example-margin"
+        [color]="'primary'"
+        mode="indeterminate"
+        diameter="100">
+      </mat-progress-spinner>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-card class="titre" id="principal">
+  <mat-card-content>
+    Classement des joueurs
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="titre" id="info">
+  <mat-card-content>
+    Nombre de joueurs : {{totalJoueurs}}
+  </mat-card-content>
+</mat-card>
+
+
+<div id="retrait" fxLayout="row" fxLayoutAlign="space-around center" *ngIf="lesPersonnes && lesPersonnes.length != 0">
+  <table class="shadow" mat-table [dataSource]="triParScore()">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+
+    <!-- Nom Column -->
+    <ng-container matColumnDef="nom">
+      <th mat-header-cell *matHeaderCellDef> Nom</th>
+      <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+    </ng-container>
+
+    <!-- Prénom Column -->
+    <ng-container matColumnDef="prenom">
+      <th mat-header-cell *matHeaderCellDef> Prenom</th>
+      <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+    </ng-container>
+
+    Score Column
+    <ng-container matColumnDef="score">
+      <th mat-header-cell *matHeaderCellDef> Score</th>
+      <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectedRow(row)"
+        [ngClass]="{hovered: row.hovered, highlighted: isSelected(row)}" (mouseover)="row.hovered = true"
+        (mouseout)="row.hovered = false"></tr>
+  </table>
+</div>

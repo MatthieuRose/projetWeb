@@ -1,0 +1,14 @@
+.home-card {
+  max-width: 750px;
+  text-align: justify;
+}
+
+.mat-card-image:first-child {
+  height: 120%;
+  width: auto;
+}
+
+#speetch {
+  line-height: 150%;
+  text-align: center;
+}

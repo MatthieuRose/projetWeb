@@ -1,0 +1,13 @@
+.image-preview {
+  height: 150px;
+}
+
+.mat-button.mat-accent[disabled], .mat-button.mat-primary[disabled], .mat-button.mat-warn[disabled], .mat-button[disabled][disabled], .mat-icon-button.mat-accent[disabled], .mat-icon-button.mat-primary[disabled], .mat-icon-button.mat-warn[disabled], .mat-icon-button[disabled][disabled], .mat-stroked-button.mat-accent[disabled], .mat-stroked-button.mat-primary[disabled], .mat-stroked-button.mat-warn[disabled], .mat-stroked-button[disabled][disabled] {
+  box-shadow: 0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12);
+  color: white;
+}
+
+.mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
+  background-color: #982828;
+  color: white;
+}
